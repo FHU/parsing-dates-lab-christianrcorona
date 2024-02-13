@@ -9,9 +9,9 @@ def parse_month(month):
 
 def parse_date(user_string):
     month, day, year = user_string.split()
-    day = day.rstrip(",") #Took me awhile to find this method
+    day = day.rstrip(",")
     month_num = parse_month(month)
-    return f"{month_num}/{day}/{year}"
+    return f"{month_num}/{day.zfill(2)}/{year}"
 
 
 if __name__ == '__main__':
